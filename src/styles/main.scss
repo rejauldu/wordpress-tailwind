@@ -1,0 +1,224 @@
+// Load utilities
+@import 'utils/fonts';
+@import 'utils/variables';
+@import 'utils/breakpoints';
+
+// Load components
+@import 'components/section';
+@import 'components/container';
+@import 'components/navbar';
+@import 'components/switch';
+@import 'components/button';
+@import 'components/miscellenious';
+
+:root {
+    font-size: var(--root-font-size);
+}
+
+* {
+    border: none;
+    box-sizing: border-box;
+    color: var(--color-secondary);
+    font-size: var(--root-font-size);
+    margin: 0;
+    outline: none;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    //outline: 1px solid red !important;
+
+    ///* Selection style for Firefox */
+    //::-moz-selection {
+    //  background: var(--color-brand);
+    //  color: var(--color-secondary);
+    //}
+    //
+    ///* Selection style for Chrome */
+    //::selection {
+    //  background: var(--color-brand);
+    //  color: #ffffff;
+    //}
+
+    // Hide the number input arrows
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color16);
+    font-size: 1.6rem;
+    max-width: 2560px;
+    overflow-anchor: none !important;
+    overflow-x: hidden;
+    width: 100%;
+
+    // ========================
+    // Default text styles
+    // ========================
+    p,
+    b,
+    strong,
+    span,
+    label,
+    input,
+    textarea,
+    div {
+        &,
+        * {
+            color: var(--color12);
+            font-family: var(--cabin-regular);
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
+
+    b,
+    strong {
+        font-family: var(--mulish-bold);
+        font-size: 1.7rem;
+        font-weight: bold;
+
+        @include media-breakpoint-up(md) {
+            &,
+            * {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+
+    // ======================
+    // Default heading styles
+    // ======================
+    h1 {
+        &,
+        * {
+            font-family: var(--raleway-bold);
+            font-size: 4rem;
+            line-height: 4rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 6.4rem;
+                line-height: 6.4rem;
+            }
+        }
+    }
+
+    //h2 {
+    //  &,
+    //  * {
+    //    font-family: var(--lato-light);
+    //    font-size: 2.8rem;
+    //    line-height: 2.8rem;
+    //    text-transform: capitalize;
+    //
+    //    @include media-breakpoint-up(md) {
+    //      font-size: 3.6rem;
+    //      line-height: 3.6rem;
+    //    }
+    //
+    //    @include media-breakpoint-up(xl) {
+    //      font-size: 3.6rem;
+    //      line-height: 4rem;
+    //    }
+    //  }
+
+    //  strong,
+    //  b {
+    //    font-family: var(--lato-bold);
+    //  }
+    //}
+
+    // h3 {
+
+    // }
+
+    h4 {
+        &,
+        * {
+            font-family: var(--lato-bold);
+            font-size: 2rem;
+            font-weight: bolder;
+            line-height: 2.4rem;
+            text-transform: uppercase;
+
+            @include media-breakpoint-up(md) {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+            }
+        }
+    }
+
+    h5 {
+        &,
+        * {
+            font-family: var(--lato-bold);
+            font-size: 2rem;
+            font-weight: bolder;
+            line-height: 2.4rem;
+            text-transform: uppercase;
+        }
+    }
+
+    h6 {
+        &,
+        * {
+            font-family: var(--lato-bold);
+            font-size: 1.2rem;
+            font-weight: bolder;
+            line-height: 1.2rem;
+            text-transform: uppercase;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+            }
+
+            @include media-breakpoint-up(xl) {
+                font-size: 2.4rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &,
+        * {
+            color: var(--color-heading);
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, var(--color-brand) 0%, transparent 100%);
+    border-radius: 50px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px white inset; /*your box-shadow*/
+}

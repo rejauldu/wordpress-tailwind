@@ -1,0 +1,13 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container-width);
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @include media-breakpoint-up('xl') {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

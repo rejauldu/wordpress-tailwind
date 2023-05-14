@@ -1,0 +1,45 @@
+:root {
+    // Color variables
+
+    --color1: #690b0a; /* Red */
+    --color2: #e1cece; /* Light Pink */
+    --color3: #cc0100; /* Dark Red */
+    --color4: #f5cccc; /* Pale Pink */
+    --color5: #b0016a; /* Magenta */
+    --color6: #efcce1; /* Light Magenta */
+    --color7: #fd8d0b; /* Orange */
+    --color8: #af48ff; /* Purple */
+    --color9: #cc9300; /* Dark Orange */
+    --color10: #cc3d00; /* Deep Orange */
+    --color11: #000000; /* Black */
+    --color12: #3a3a3a; /* Dark Gray */
+    --color13: #a6a6aa; /* Light Gray */
+    --color14: #cbcbd4; /* Gray */
+    --color15: #f8f7fa; /* Pale Gray */
+    --color16: #ffffff; /* White */
+
+    // =====================
+    // Typography variables
+    // =====================
+
+    // Raleway variables
+    --raleway-light: 'Raleway-Light', arial, helvetica, sans-serif;
+    --raleway-regular: 'Raleway-Regular', arial, helvetica, sans-serif;
+    --raleway-medium: 'Raleway-Medium', arial, helvetica, sans-serif;
+    --raleway-semibold: 'Raleway-SemiBold', arial, helvetica, sans-serif;
+    --raleway-bold: 'Raleway-Bold', arial, helvetica, sans-serif;
+    --raleway-extrabold: 'Raleway-ExtraBold', arial, helvetica, sans-serif;
+
+    // Cabin fonts
+    --cabin-regular: 'Cabin-Regular', arial, helvetica, sans-serif;
+    --cabin-medium: 'Cabin-Medium', arial, helvetica, sans-serif;
+    --cabin-semibold: 'Cabin-SemiBold', arial, helvetica, sans-serif;
+    --cabin-bold: 'Cabin-Bold', arial, helvetica, sans-serif;
+
+    // Miscellaneous variables
+    --container-width: 124rem; // 1240px
+    --root-font-size: 62.5%;
+
+    --border-radius1: 1rem;
+    --border-radius2: 1.5rem;
+}

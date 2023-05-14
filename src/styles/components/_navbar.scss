@@ -1,0 +1,66 @@
+.navbar {
+    .navigation-menu {
+        background-color: var(--color16);
+        @include media-breakpoint-up('xl') {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        @include media-breakpoint-down('xl') {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            transition: max-height 0.5s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+
+            &--active {
+                max-height: 100vh;
+            }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            height: 100%;
+
+            @include media-breakpoint-down('xl') {
+                flex-direction: column;
+                gap: 1.5rem;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+
+            &-item {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    color: var(--color12);
+                    cursor: pointer;
+                    font-family: var(--cabin-bold);
+                    transition: all 0.5s ease-in-out;
+                    display: grid;
+                    place-items: center;
+                    height: 100%;
+                }
+
+                &:hover {
+                    a {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
