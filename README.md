@@ -27,4 +27,4 @@
 <li>Include output.css to wordpress</li>
 </ul>
 
-<p>Youtube:<a href="https://www.youtube.com/watch?v=_8iy0Gfl_9E&t=13s">Link</a></p>
+<p>Youtube: <a href="https://www.youtube.com/watch?v=_8iy0Gfl_9E&t=13s">Link</a></p>
