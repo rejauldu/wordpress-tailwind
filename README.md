@@ -13,14 +13,13 @@
 <li>Open cmd to the theme</li>
 <li>Go to the tailwind website>Tailwind CLI then execute:<br/>
 <code>npm install -D tailwindcss<br/>
-npx tailwindcss init</code>
+ npx tailwindcss init</code>
 </li>
 <li>Configure your template parts (means configure tailwind.config.js's content:[] to locate your files)</li>
 <li>Create src/input.css and add the following code:<br/>
-<code>
-@tailwind base;<br/>
-@tailwind components;<br/>
-@tailwind utilities;</code>
+<code>@tailwind base;<br/>
+ @tailwind components;<br/>
+ @tailwind utilities;</code>
 </li>
 <li>Now run the command to build:<br/>
 <code>npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch</code>
