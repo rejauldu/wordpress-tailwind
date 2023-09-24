@@ -1,0 +1,38 @@
+select {
+    word-wrap: normal;
+    text-transform: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    display: block;
+    width: 100%;
+    padding: 1.3rem 2rem;
+    -moz-padding-start: calc(1.2rem - 3px);
+    color: var(--color12);
+    background-color: var(--color16);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1.2rem center;
+    background-size: 1.6rem 1.2rem;
+    border: 0.1rem solid #ced4da;
+    border-radius: var(--border-radius1);
+    transition: all 0.4s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-height: 4.8rem;
+}
+
+.select-wrapper .select-options {
+    position: absolute;
+    inset: 0;
+    background: var('--color16');
+}
+
+.select-wrapper .select-options div {
+    height: 2.4rem;
+}

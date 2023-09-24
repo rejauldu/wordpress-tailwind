@@ -1,0 +1,114 @@
+@mixin btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    border-radius: var(--border-radius2);
+    background-color: var(--color1);
+    color: var(--color16);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: var(--cabin-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border: 0.2rem solid var(--color1);
+}
+
+.button-primary {
+    @include btn-primary;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--color1);
+    }
+}
+
+.button-primary-sm {
+    @include btn-primary;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--color1);
+    }
+
+    border-radius: var(--border-radius1);
+    font-family: var(--cabin-regular);
+    padding: 1.8rem 1.2rem;
+    height: 3.2rem;
+}
+
+.button2 {
+    @include btn-primary;
+
+    &:hover {
+        background-color: transparent;
+        border: 0.2rem solid var(--color16);
+        color: var(--color16);
+    }
+}
+
+.button3 {
+    align-items: center;
+    border: 0.2rem solid transparent;
+    border-radius: var(--border-radius2);
+    color: var(--color16);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--cabin-bold);
+    font-size: 1.6rem;
+    justify-content: center;
+    line-height: 2.4rem;
+    padding: 1.5rem 2.5rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        border: 0.2rem solid var(--color16);
+        color: var(--color16);
+    }
+}
+
+.button4 {
+    align-items: center;
+    border: 0.2rem solid transparent;
+    border-radius: var(--border-radius2);
+    color: var(--color11);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--cabin-bold);
+    font-size: 1.6rem;
+    gap: 1rem;
+    justify-content: center;
+    line-height: 2.4rem;
+    padding: 1.5rem 2.5rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        border: 0.2rem solid var(--color11);
+    }
+}
+
+.button5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    border-radius: var(--border-radius2);
+    background-color: var(--color16);
+    color: var(--color11);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: var(--cabin-bold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border: 0.2rem solid var(--color16);
+
+    &:hover {
+        background-color: transparent;
+        color: var(--color16);
+    }
+}

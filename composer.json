@@ -1,0 +1,19 @@
+{
+    "name": "ict4today/i4t",
+    "description": "The 'ict4today' WordPress theme is a dynamic and versatile solution designed for modern websites. Crafted by a skilled freelancer, this theme seamlessly blends style and functionality, catering to a wide range of online projects. With its user-friendly customization options, 'ict4today' empowers businesses, bloggers, and creatives to effortlessly create a unique online presence.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ict4Today\\I4T\\": "includes/classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rejaul Karim | ict4today",
+            "email": "rejauldu@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

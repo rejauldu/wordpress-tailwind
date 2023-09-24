@@ -1,0 +1,62 @@
+@mixin radio-check-input {
+    width: 2.1rem;
+    height: 1.9rem;
+    margin-top: 0.2rem;
+    vertical-align: top;
+    background-color: var('--color16');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 0.1rem solid var('--color12');
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    transition: all 0.4s;
+}
+@mixin radio-check-label {
+    color: var('--color12');
+    cursor: pointer;
+}
+label {
+    display: inline-block;
+}
+/* Container div */
+.radio-check {
+    display: block;
+    min-height: 2.4rem;
+    padding-left: 3rem;
+    margin-bottom: 0.2rem;
+}
+.radio-check-label {
+    @include radio-check-label;
+}
+.radio-check-input {
+    @include radio-check-input;
+    float: left;
+    margin-left: -3rem;
+    cursor: pointer;
+}
+.radio-check-input[type='checkbox'] {
+    border-radius: 0.3rem;
+}
+.radio-check-input:checked[type='checkbox'] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+.radio-check-input:checked {
+    background-color: var('--color1');
+    border-color: var('--color1');
+}
+
+/*
+* Different for radio
+*/
+.radio-check-input[type='radio'] {
+    width: 1.9rem;
+    border-radius: 50%;
+}
+.radio-check-input:checked[type='radio'] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}

@@ -1,0 +1,23 @@
+/*
+Theme Name: ict4today
+Author: Rejaul Karim
+Author URI: https://ict4today.com
+Version: 1.0
+*/
+.text-theme {
+	color:#fac705;
+}
+.bg-theme {
+	background:#fac705;
+}
+.input-theme {
+	background: #fae39d !important;
+	border-color: #fae39d !important;
+	color:#4e3b02 !important;
+}
+.text-deep-light {
+	color:#babfc4;
+}
+.text-light-secondary {
+	color:#9199a1;
+}
