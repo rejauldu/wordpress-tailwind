@@ -13,18 +13,18 @@
 }
 .menu-item {
     &>a:hover, &>a:focus {
-      @apply text-gray-500
+      @apply text-theme-primary no-underline;
     }
 }
 .navbar {
-  @apply relative flex flex-wrap items-center justify-between p-2;
+  @apply relative flex flex-wrap items-center justify-between p-2 bg-white border-y
 }
 
 .navbar-nav {
   @apply flex flex-col ps-0 mb-0 list-none;
 }
-.navbar-nav .menu-item.current-menu-item>a, .navbar-nav .menu-item>a.show {
-  @apply text-gray-500;
+.navbar-nav .menu-item.current-menu-item>a {
+  @apply text-theme-primary;
 }
 
 .navbar-collapse {
@@ -63,11 +63,11 @@
 }
 .sticky-top {
   @apply sticky top-0 z-['1020'];
-  animation: smoothScroll 0.1s alternate;
+  animation: smoothScroll 0.3s alternate;
 }
 @keyframes smoothScroll {
 	0% {
-		transform: translateY(-40px);
+		transform: translateY(-60px);
 	}
 	100% {
 		transform: translateY(0px);

@@ -1,5 +1,6 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env, argv) => {
@@ -8,7 +9,7 @@ module.exports = (env, argv) => {
   return {
     entry: './src/index.ts',
     output: {
-      filename: 'scripts/main.js',
+      filename: 'scripts/main.min.js',
       path: path.resolve(__dirname, 'build'),
     },
     devtool: isDevelopment ? 'eval-source-map' : false,
@@ -30,7 +31,7 @@ module.exports = (env, argv) => {
             {
                 loader: 'css-loader',
                 options: {
-                  url: false
+                  url: true
                 }
             },
             {
@@ -45,7 +46,7 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'main.css',
+        filename: 'styles/main.min.css',
       }),
     ],
     watch: isDevelopment,
@@ -54,11 +55,12 @@ module.exports = (env, argv) => {
     },
     optimization: {
       minimizer: [
-        new TerserPlugin({}),
+        new TerserPlugin(),
+        new CssMinimizerPlugin(),
       ],
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.js', 'jsx'],
+      extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
   };
 };

@@ -1,0 +1,17 @@
+form#searchform {
+    &>div {
+        @apply relative w-full;
+        input[type="text"] {
+            @apply border h-10 rounded w-full shadow-theme-primary pl-2 border-slate-300;
+        }
+        input[type="text"]:focus {
+            @apply outline-theme-primary ;
+        }
+        input[type="submit"] {
+            @apply absolute inline-block px-3 py-1.5 right-0 top-0 h-10 cursor-pointer;
+        }
+        input[type="submit"]:hover {
+            @apply text-theme-primary;
+        }
+    }
+}

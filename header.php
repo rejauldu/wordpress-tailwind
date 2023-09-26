@@ -8,6 +8,31 @@
 	</head>
 	
 <body <?php body_class(); ?>>
+	<div class="container mx-auto">
+		<div class="grid grid-flow-col items-center">
+			<?php
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				if ( has_custom_logo() ) {
+					echo '<a class="navbar-brand" href="/"><img class="h-15 py-8" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"></a>';
+				} else {
+					echo '<a class="navbar-brand" href="/">Logo</a>';
+				}
+			?>
+			<div class="justify-self-stretch hidden sm:block"><?php get_search_form(); ?></div>
+			<div class="justify-self-end flex gap-5 px-4">
+				<a href="/cart">
+					<?php echo getSVG('assets/images/svg/heart.svg', 'w-6 h-6 text-black hover:text-theme-primary'); ?>
+				</a>
+				<a href="/user">
+					<?php echo getSVG('assets/images/svg/user.svg', 'w-6 h-6 text-black hover:text-theme-primary'); ?>
+				</a>
+				<a href="/cart">
+					<?php echo getSVG('assets/images/svg/cart.svg', 'w-6 h-6 text-black hover:text-theme-primary'); ?>
+				</a>
+			</div>
+		</div>
+	</div>
 	<nav class="navbar navbar-expand-sm">
 		<div class="container mx-auto">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-menu">

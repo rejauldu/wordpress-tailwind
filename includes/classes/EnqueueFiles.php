@@ -16,15 +16,7 @@ trait EnqueueFiles {
 	 * @return void
 	 */
 	public function loadStyles(): void {
-		wp_enqueue_style( 'i4t-theme', get_stylesheet_uri() );
-
-		wp_enqueue_style(
-			'tailwind-css',
-			I4T_PATH_URL . 'build/styles/tailwind.css',
-			[],
-			VERSION,
-			'all'
-		);
+		// wp_enqueue_style( 'i4t-theme', get_stylesheet_uri() );
 
 		if ( MODE !== 'development' ) {
 			wp_enqueue_style(
@@ -45,7 +37,7 @@ trait EnqueueFiles {
 	public function loadScripts(): void {
 		wp_enqueue_script(
 			'i4t',
-			I4T_PATH_URL . 'build/scripts/main.js',
+			I4T_PATH_URL . 'build/scripts/main.min.js',
 			[],
 			VERSION,
 			true

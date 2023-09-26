@@ -1,25 +1,19 @@
 <?php get_header(); ?>
-<section class="position-relative">
-	<img class="w-100 h-100" src="<?php echo get_theme_file_uri(); ?>/assets/images/banner.webp" />
-	<div class="container-fluid position-absolute top-0 h-100">
-		<div class="row h-100">
-			<div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-				<div >
-					<h1><a class="text-decoration-none text-light" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-					<h5 class="text-light"><?php bloginfo('description'); ?></h5>
-					<div>
-						<a class="btn btn-warning" href="/fruits">All fruits</a>
-						<a class="btn btn-primary" href="/mangoes">Mangoes</a>
-						<span class="text-red-500">Tailwind</span>
-					</div>
-				</div>
-				
+<section class="bg-gray-100">
+	<div class="container mx-auto grid md:grid-cols-[1fr_auto]">
+		<div class="grid gap-6 content-center p-5 text-center sm:text-left">
+			<span class="text-6xl italic">Daily Grocery</span>
+			<h1>Fresh and Healthy</h1>
+			<p>Direct to your home</p>
+			<div>
+				<?php get_template_part('includes/template-parts/buttons/button-regular'); ?>
 			</div>
+			
 		</div>
+		<img class="w-100 h-100" src="<?php echo get_theme_file_uri(); ?>/assets/images/masthead-images/cart-girl.webp" />
 	</div>
-	
 </section>
-	<div class="">
+	<div class="container mx-auto">
 
 			<?php if (have_posts()) :
 				while (have_posts()) : the_post();

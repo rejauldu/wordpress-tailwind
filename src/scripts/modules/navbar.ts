@@ -12,7 +12,7 @@ class Navbar {
      * Construct function
      */
     constructor() {
-        this.navbar = document.getElementById( 'navbar' );
+        this.navbar = document.querySelector( '.navbar' );
         this.navMenu = document.querySelector('.i4t-collapse.navbar-collapse');
         this.navbarToggler = document.querySelector('[data-bs-toggle="collapse"].navbar-toggler');
 
@@ -106,7 +106,8 @@ class Navbar {
     }
 	 
 	changeNavbarVisibility() {
-        if ( window.scrollY > 400 ) {
+        console.log( 123 );
+        if ( window.scrollY > 180 ) {
             this.navbar?.classList.add('sticky-top');
         } else {
             this.navbar?.classList.remove('sticky-top');
