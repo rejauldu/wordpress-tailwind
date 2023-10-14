@@ -106,7 +106,6 @@ class Navbar {
     }
 	 
 	changeNavbarVisibility() {
-        console.log( 123 );
         if ( window.scrollY > 180 ) {
             this.navbar?.classList.add('sticky-top');
         } else {

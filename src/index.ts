@@ -1,4 +1,3 @@
-import './styles/tailwind.css';
 import './styles/main.scss';
 
 import Navbar from './scripts/modules/navbar';

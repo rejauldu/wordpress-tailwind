@@ -2,15 +2,15 @@
 <section class="bg-gray-100">
 	<div class="container mx-auto grid md:grid-cols-[1fr_auto]">
 		<div class="grid gap-6 content-center p-5 text-center sm:text-left">
-			<span class="text-6xl italic">Daily Grocery</span>
-			<h1>Fresh and Healthy</h1>
+			<span class="text-6xl italic"><?php bloginfo('description'); ?></span>
+			<h1><?php bloginfo('name'); ?></h1>
 			<p>Direct to your home</p>
 			<div>
-				<?php get_template_part('includes/template-parts/buttons/button-regular'); ?>
+				<?php get_template_part('includes/template-parts/buttons/btn-secondary'); ?>
 			</div>
 			
 		</div>
-		<img class="w-100 h-100" src="<?php echo get_theme_file_uri(); ?>/assets/images/masthead-images/cart-girl.webp" />
+		<img alt="Girl with shopping cart" width="461" height="541" class="w-100 h-100" src="<?php echo get_theme_file_uri(); ?>/assets/images/masthead-images/cart-girl.webp" />
 	</div>
 </section>
 	<div class="container mx-auto">
@@ -28,6 +28,7 @@
 				endif; ?>
 			
 	</div>
-	<?php get_footer();
-
-?>
+<?php get_template_part('includes/template-parts/products/index', '', [
+	'postPerPage' => 20
+]); ?>
+<?php get_footer();?>

@@ -19,12 +19,12 @@ trait ApiManager {
 	/**
 	 * Route for the endpoint.
 	 */
-	protected string|array $endpoints = [];
+	protected $endpoints = [];
 	
 	/**
 	 * API namespace
 	 */
-	private string $namespace = 'i4t/v1';
+	private $namespace = 'i4t/v1';
 	
 	
 	/**

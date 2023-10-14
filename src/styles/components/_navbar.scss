@@ -19,6 +19,16 @@
 .navbar {
   @apply relative flex flex-wrap items-center justify-between p-2 bg-white border-y
 }
+.navbar.sticky-top {
+  @apply shadow-[0_1px_3px_#0002];
+  .menu-item-has-children {
+    @media (min-width: 640px) {
+      .sub-menu {
+        @apply shadow-[0_3px_3px_#0002];
+      }
+    }
+  }
+}
 
 .navbar-nav {
   @apply flex flex-col ps-0 mb-0 list-none;
@@ -61,15 +71,63 @@
     @apply hidden
   }
 }
+.menu-item-has-children {
+  @apply relative border-y;
+  .sub-menu {
+    position: static;
+    z-index: 1000;
+    display: block;
+    min-width: 10rem;
+    margin: 0;
+    text-align: left;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    margin-left: 1rem;
+    font-size: 80%;
+    a:hover {
+      @apply bg-theme-light;
+    }
+    
+  }
+  @media (min-width: 640px) {
+    @apply border-0;
+    .sub-menu {
+      @apply absolute ml-0 hidden;
+    }
+    &:hover .sub-menu {
+      display: block;
+      border: 1px solid #0002;
+      border-top: 0;
+      border-radius: 0 0 0.375rem 0.375rem;
+    }
+  }
+}
+.menu-item-has-children {
+  &.current-menu-ancestor>a {
+    @apply text-theme-primary
+  }
+  &>a::after{
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+}
 .sticky-top {
-  @apply sticky top-0 z-['1020'];
+  @apply sticky top-0 z-[1020];
   animation: smoothScroll 0.3s alternate;
 }
 @keyframes smoothScroll {
-	0% {
-		transform: translateY(-60px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
+  0% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

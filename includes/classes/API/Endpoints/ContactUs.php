@@ -12,8 +12,8 @@ use WpOrg\Requests\Exception;
 class ContactUs implements EndpointInterface {
 	use Utils;
 
-	private object|null $requestBody = null;
-	private array|null $data = null;
+	private $requestBody = null;
+	private $data = null;
 
 	/**
 	 * Returns the HTTP method for the request.

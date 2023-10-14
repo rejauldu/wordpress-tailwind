@@ -8,13 +8,13 @@
 	</head>
 	
 <body <?php body_class(); ?>>
-	<div class="container mx-auto">
-		<div class="grid grid-flow-col items-center">
+	<div class="container md:mx-auto">
+		<div class="grid grid-flow-col items-center mx-2">
 			<?php
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				if ( has_custom_logo() ) {
-					echo '<a class="navbar-brand" href="/"><img class="h-15 py-8" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"></a>';
+					echo '<a class="navbar-brand" href="/"><img width="64" height="64" class="h-16 my-6" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"></a>';
 				} else {
 					echo '<a class="navbar-brand" href="/">Logo</a>';
 				}

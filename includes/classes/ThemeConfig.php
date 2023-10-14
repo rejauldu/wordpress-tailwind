@@ -25,7 +25,7 @@ trait ThemeConfig {
 		add_theme_support('menus');
 		add_theme_support('title-tag');
 		add_theme_support('post-thumbnails');
-		//		add_theme_support('woocommerce', ['thumbnail_image_width' => 285]);
+		add_theme_support('woocommerce', ['thumbnail_image_width' => 360]);
 		add_theme_support('custom-background');
 		add_theme_support('custom-header');
 		add_theme_support('custom-logo');
@@ -61,7 +61,7 @@ trait ThemeConfig {
 	
 	function custom_product_thumbnail_size($size) {
 		if ($size === 'product-medium') {
-			return [285, 160, ['center', 'center']];
+			return [360, 360, ['center', 'center']];
 		} elseif ($size === 'product-full') {
 			return [800, 800, ['center', 'center']];
 		}

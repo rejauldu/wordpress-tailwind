@@ -26,7 +26,7 @@ function getSVG(string $imagePath, string $class = '') {
  * @return array|WP_Error An array of term objects representing the product categories with associated products,
  *                                or a WP_Error object if there was an error retrieving the categories.
  */
-function getProductCategories(int $numberOfCategories = 0): array|WP_Error {
+function getProductCategories(int $numberOfCategories = 0): array {
 	$args = [
 		'taxonomy'   => 'product_cat',
 		'hide_empty' => true,

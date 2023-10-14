@@ -56,7 +56,7 @@ trait Utils {
 	 *
 	 * @return string|false The URL of the image or false if the attachment is not found
 	 */
-	function getImageUrlByAttachmentId(int $attachmentId, string $size = 'full'): bool|string {
+	function getImageUrlByAttachmentId(int $attachmentId, string $size = 'full'): bool {
 		$imageData = wp_get_attachment_image_src($attachmentId, $size);
 		
 		if ($imageData) {
