@@ -3,7 +3,7 @@
 		<?php echo getSVG('assets/images/svg/cart.svg', 'w-6 h-6 text-black hover:text-theme-primary'); ?>
 	</a>
 </div>
-<footer class="bg-slate-100">
+<footer class="bg-slate-100 relative">
 	
 	<div class="container mx-auto grid gap-1 sm:gap-5 sm:grid-cols-3 md:grid-cols-4 text-center sm:text-left py-5">
 		<div class="hidden md:block">
