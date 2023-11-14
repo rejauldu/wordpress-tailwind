@@ -42,6 +42,13 @@ trait EnqueueFiles {
 			VERSION,
 			true
 		);
+
+		// wp_enqueue_script(
+		// 	'custom-block',
+		// 	get_template_directory_uri() . '/custom-blocks/index.js',
+		// 	array('wp-blocks', 'wp-editor', 'wp-components', 'wp-i18n'),
+		// 	filemtime(get_template_directory() . '/custom-blocks/index.js')
+		// );
 	}
 
 	/**
@@ -92,5 +99,9 @@ trait EnqueueFiles {
 				true
 			);
 		}
+	}
+
+	function enqueue_custom_block_assets() {
+		wp_enqueue_script('custom-block', get_template_directory_uri() . '/custom-blocks/index.js', array('wp-blocks', 'wp-editor', 'wp-components', 'wp-i18n'), null, true);
 	}
 }

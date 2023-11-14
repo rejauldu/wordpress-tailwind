@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'ict4today/i4t',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-wp_nav_menu',
+        'version' => 'dev-wp_nav_menu',
+        'reference' => 'eca07445ff8bebb8c023b8b076735e03bdb32668',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'ict4today/i4t' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-wp_nav_menu',
+            'version' => 'dev-wp_nav_menu',
+            'reference' => 'eca07445ff8bebb8c023b8b076735e03bdb32668',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -20,6 +20,7 @@ class ActionHooks {
 		add_action( 'wp_enqueue_scripts', [ $this, 'wpEnqueueScriptsHookCallback' ] );
 		add_action( 'after_setup_theme', [ $this, 'setupThemeConfig' ] );
 		add_action( 'init', [ $this, 'initHookCallback' ], 0 );
+		add_action('enqueue_block_editor_assets', [ $this, 'enqueue_custom_block_assets' ]);
 
 		// Register REST API endpoints
 		add_action( 'rest_api_init', [ $this, 'registerApiEndPoints' ] );
@@ -37,6 +38,7 @@ class ActionHooks {
 		$this->registerContactRequestPost();
 
 		$this->addMetaFields();
+		$this->register_custom_gutenberg_block();
 	}
 
 	/**

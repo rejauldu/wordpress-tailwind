@@ -40,7 +40,7 @@
 			</button>
 			<?php
 				$args = array(
-					'theme_location' => 'primary',
+					'theme_location' => 'headerMenu',
 					'container_class' => 'i4t-collapse navbar-collapse',
 					'menu_class'     => 'navbar-nav'
 				);

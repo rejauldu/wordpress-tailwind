@@ -23,7 +23,7 @@
 			<p class="mb-5 text-xl">Links</p>
 			<?php
 			$menu_locations = get_nav_menu_locations();
-			$menu_items = wp_get_nav_menu_items( $menu_locations['footer'] );
+			$menu_items = wp_get_nav_menu_items( $menu_locations['footerMenu'] );
 			if($menu_items) {?>
 			<ul>
 				<?php

@@ -67,4 +67,18 @@ trait ThemeConfig {
 		}
 		return $size;
 	}
+
+	function register_custom_gutenberg_block() {
+		// Register the block's JavaScript file.
+		wp_register_script(
+			'custom-block',
+			get_template_directory_uri() . '/custom-blocks/index.js',
+			array('wp-blocks', 'wp-editor', 'wp-components', 'wp-i18n')
+		);
+
+		// Register the block using 'register_block_type'.
+		register_block_type('ict4today/custom-block', array(
+			'editor_script' => 'custom-block',
+		));
+	}
 }

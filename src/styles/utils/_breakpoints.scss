@@ -27,29 +27,3 @@
         @warn "Breakpoint mixin supports: xs, sm, md, lg, xl, '2xl'";
     }
 }
-
-@mixin media-breakpoint-down($break-points) {
-    @if $break-points == sm {
-        @media (max-width: 639px) {
-            @content;
-        }
-    } @else if $break-points == md {
-        @media (max-width: 767px) {
-            @content;
-        }
-    } @else if $break-points == lg {
-        @media (max-width: 1023px) {
-            @content;
-        }
-    } @else if $break-points == xl {
-        @media (max-width: 1279px) {
-            @content;
-        }
-    } @else if $break-points == 2xl {
-        @media (max-width: 1535px) {
-            @content;
-        }
-    } @else {
-        @warn "Breakpoint mixin supports: sm, md, lg, xl, 2xl";
-    }
-}
