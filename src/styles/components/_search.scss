@@ -1,0 +1,12 @@
+
+form#searchform {
+    &>div {
+        @apply flex focus-within:shadow-theme-gray focus-within:border-theme-primary border rounded-full transition-all duration-300 px-3;
+        input[type="text"] {
+            @apply h-8 border-0 outline-none bg-transparent text-theme-gray flex-grow;
+        }
+        button[type="submit"] {
+            @apply h-8 border-0 outline-none bg-transparent text-theme-gray hover:text-theme-primary;
+        }
+    }
+}

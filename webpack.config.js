@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
   return {
     entry: './src/index.ts',
     output: {
-      filename: 'scripts/main.js',
+      filename: 'scripts/main.min.js',
       path: path.resolve(__dirname, 'build'),
     },
     devtool: isDevelopment ? 'eval-source-map' : false,

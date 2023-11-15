@@ -1,9 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.php","./**/*.ts","./**/*.tsx"],
+  content: ["./**/*.php","./**/*.ts","./**/*.tsx","./**/*.svg"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'theme': {
+          'primary': '#00a651',
+          'light': '#e0faeb7d',
+          'secondary': '#FF7100',
+          'gray': '#888'
+        }
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-line-clamp')
+  ],
 }
 
